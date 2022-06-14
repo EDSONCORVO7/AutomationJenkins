@@ -32,7 +32,7 @@ private WebDriver driver;
 		searchbox.sendKeys("QA");
 		searchbox.submit(); // Enter
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		assertEquals("QA -",driver.getTitle());
+		assertEquals("QA - Buscar con Google",driver.getTitle());
 		
 	}
 	
