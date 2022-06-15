@@ -4,7 +4,7 @@ node{
 	}
 	stage('test'){
 		step{
-			dir("TestCasesAutomation")
+			//dir("TestCasesAutomation")
 			sh "mvn clean compile test"
 		}
 		
