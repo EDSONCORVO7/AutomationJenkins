@@ -1,5 +1,6 @@
 node{
 	stage('SCM Checkout'){
+	    tool name: 'Maven', type: 'maven'
 		git 'https://github.com/EDSONCORVO7/AutomationJenkins.git'
 	}
 	stage('test'){
