@@ -1,20 +1,17 @@
 pipeline {
     agent any
     tools{
-        maven 'Maven'
+       def mvnHome =  maven 'Maven'
     }
     stages {
+        stage('SCM Checkout') {
+            git 'https://github.com/EDSONCORVO7/AutomationJenkins.git'
+        }
+        
         stage('Build') {
-            steps {
-                echo 'Hello World'
-               // checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '82504bd2-dcba-40a0-aa0e-e7943d047e32', url: 'https://github.com/EDSONCORVO7/AutomationJenkins.git']]])
-               // sh 'mvn package'
-            }
+            git 'https://github.com/EDSONCORVO7/AutomationJenkins.git'
+            sh "${mvnHome}/bin/mvn package"
         }
     }
-    post{
-        always{
-            junit 'build/reports/**/*.xml'
-        }
-    }
+    
 }
