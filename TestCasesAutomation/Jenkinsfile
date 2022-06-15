@@ -2,9 +2,12 @@ node{
 	stage('SCM Checkout'){
 		git 'https://github.com/EDSONCORVO7/AutomationJenkins.git'
 	}
-	stage('Build-Package'){
-		// Get maven home path
+	stage('test'){
+		step{
+			dir("TestCasesAutomation")
+			sh "mvn clean compile test"
+		}
 		
-		sh "mvn package"
+		
 	}
 }
