@@ -8,6 +8,13 @@ node{
 			sh "mvn clean compile test"
 		}
 		
+		}
+		stage('Build appliction'){
+		step{
+			
+			echo "mvn clean install -Dmaven.test.skip-true"
+		}
 		
 	}
-}
+ }
+
