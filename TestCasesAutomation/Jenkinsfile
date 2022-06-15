@@ -7,8 +7,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Hello World'
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '82504bd2-dcba-40a0-aa0e-e7943d047e32', url: 'https://github.com/EDSONCORVO7/AutomationJenkins.git']]])
-                sh 'mvn package'
+               // checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '82504bd2-dcba-40a0-aa0e-e7943d047e32', url: 'https://github.com/EDSONCORVO7/AutomationJenkins.git']]])
+               // sh 'mvn package'
             }
         }
     }
