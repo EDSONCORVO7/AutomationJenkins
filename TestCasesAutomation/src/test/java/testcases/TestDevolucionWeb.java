@@ -46,14 +46,15 @@ Time wait = new Time();
 		
 	}
 	
+	//@Ignore
 	@Test
 	@Order(2)
 	public void testPlaceholderPNREmailEnglish() {
 		wait.Tiempo(4000);
 		WebElement culturaChile = driver.findElement(By.cssSelector("#dropdown01"));
-		WebElement culturaEnglish = driver.findElement(By.xpath("//div[@id='dd']//div//a[@class='dropdown-item'][normalize-space()='English']"));
+		WebElement culturaEnglish = driver.findElement(By.xpath("//*[@id=\"dd\"]/div[4]/a"));
 		
-		culturaChile.click();
+		culturaChile.click(); 
 		wait.Tiempo(4000);
 		culturaEnglish.click();
 		wait.Tiempo(5000);
@@ -63,6 +64,26 @@ Time wait = new Time();
 		
 		//Se verifica el texto dentro del textbox PnrEmail
 		assertEquals("Passenger last name or buyer email",placehd);
+		
+	}
+	
+	@Test
+	@Order(3)
+	public void testPlaceholderPNREmailPeru() {
+		wait.Tiempo(4000);
+		WebElement culturaChile = driver.findElement(By.cssSelector("#dropdown01"));
+		WebElement culturaPeru = driver.findElement(By.xpath("//*[@id=\"dd\"]/div[3]/a"));
+		
+		culturaChile.click();
+		wait.Tiempo(4000);
+		culturaPeru.click();
+		wait.Tiempo(5000);
+		
+		WebElement pnrEmail = driver.findElement(By.name("PnrEmail"));
+		String placehd = pnrEmail.getAttribute("placeholder");
+		
+		//Se verifica el texto dentro del textbox PnrEmail
+		assertEquals("Apellido Pasajero o Email del Comprador",placehd);
 		
 	}
 	
