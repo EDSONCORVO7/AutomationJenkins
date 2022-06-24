@@ -33,7 +33,7 @@ public class TestDevolucionWeb {
 		// driver.get("https://www.google.cl/");
 	}
 
-	@Ignore
+	
 	@Test
 	@Order(1)
 	public void testPlaceholderPNREmailChile() {
@@ -45,7 +45,7 @@ public class TestDevolucionWeb {
 		assertEquals("Apellido Pasajero o Email del Comprador", placehd);
 	}
 
-	@Ignore
+	
 	@Test
 	@Order(2)
 	public void testPlaceholderPNREmailEnglish() {
@@ -65,7 +65,7 @@ public class TestDevolucionWeb {
 		assertEquals("Passenger last name or buyer email", placehd);
 	}
 
-	@Ignore
+	
 	@Test
 	@Order(3)
 	public void testPlaceholderPNREmailPeru() {
@@ -85,7 +85,7 @@ public class TestDevolucionWeb {
 		assertEquals("Apellido Pasajero o Email del Comprador", placehd);
 	}
 
-	@Ignore
+	
 	@Test
 	@Order(4)
 	public void testPlaceholderPNREmailArgentina() {
@@ -105,7 +105,7 @@ public class TestDevolucionWeb {
 		assertEquals("Apellido Pasajero o Email del Comprador", placehd);
 	}
 
-	@Ignore
+	
 	@Test
 	@Order(5)
 	public void testPlaceholderPNREmailColombia() {
@@ -126,8 +126,9 @@ public class TestDevolucionWeb {
 		assertEquals("Apellido Pasajero o Email del Comprador", placehd);
 	}
 	
+	
 	@Test
-	@Order(5)
+	@Order(6)
 	public void testPlaceholderPNREmailBrasil() {
 		wait.Tiempo(4000);
 		
@@ -144,6 +145,26 @@ public class TestDevolucionWeb {
 
 		// Se verifica el texto dentro del textbox PnrEmail
 		assertEquals("Sobrenome do passageiro ou endereço de e-mail do comprador", placehd);
+	}
+	
+	@Test
+	@Order(7)
+	public void testPlaceholderPNREmailUruguay() {
+		wait.Tiempo(4000);
+		
+		WebElement culturaChile = driver.findElement (By.cssSelector("#dropdown01"));
+		WebElement culturaUruguay = driver.findElement(By.xpath("//*[@id=\"dd\"]/div[7]/a"));
+
+		culturaChile.click();
+		wait.Tiempo(4000);
+		culturaUruguay.click();
+		wait.Tiempo(5000);
+
+		WebElement pnrEmail = driver.findElement(By.name("PnrEmail"));
+		String placehd = pnrEmail.getAttribute("placeholder");
+
+		// Se verifica el texto dentro del textbox PnrEmail
+		assertEquals("Apellido Pasajero o Email del Comprador", placehd);
 	}
 
 	/*
