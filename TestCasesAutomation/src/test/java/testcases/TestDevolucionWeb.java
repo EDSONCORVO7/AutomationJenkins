@@ -465,6 +465,7 @@ public class TestDevolucionWeb {
 		File file = new File(System.getProperty("user.dir")+"\\ImageFolder\\toolTipEmailUruguay.png");
 		System.out.println(file);
 		ImageIO.write(shot.getImage(), "PNG", file);
+		wait.Tiempo(3000);
 		
 		//Getting Expected Image
 		BufferedImage expectedImg = ImageIO.read(file);
