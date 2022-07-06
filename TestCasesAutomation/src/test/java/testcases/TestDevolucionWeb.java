@@ -467,7 +467,7 @@ public class TestDevolucionWeb {
 		Screenshot shot = new AShot().takeScreenshot(driver);
 		File file = new File(System.getProperty("user.dir")+"\\ImageFolder\\toolTipEmailUruguay.png");
 		System.out.println(file);
-		//ImageIO.write(shot.getImage(), "PNG", file);
+		ImageIO.write(shot.getImage(), "PNG", file);
 		
 		
 		//Getting Expected Image
