@@ -17,6 +17,8 @@ import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -458,14 +460,15 @@ public class TestDevolucionWeb {
 		WebElement we = driver.findElement(By.xpath("//*[@id=\"basic-addon2\"]"));
 		action.moveToElement(we).build().perform();
 		
-		wait.Tiempo(3000);
 		
+		wait.Tiempo(3000);
+				
 		//Capture and store logo image
-		Screenshot shot = new AShot().takeScreenshot(driver, we);
+		Screenshot shot = new AShot().takeScreenshot(driver);
 		File file = new File(System.getProperty("user.dir")+"\\ImageFolder\\toolTipEmailUruguay.png");
 		System.out.println(file);
 		ImageIO.write(shot.getImage(), "PNG", file);
-		wait.Tiempo(3000);
+		
 		
 		//Getting Expected Image
 		BufferedImage expectedImg = ImageIO.read(file);
