@@ -45,7 +45,7 @@ public class TestDevolucionWeb {
 		// driver.get("https://www.google.cl/");
 	}
 
-	@Ignore
+	
 	@Test
 	@Order(1)
 	public void testPlaceholderPNREmailChile() {
@@ -57,7 +57,7 @@ public class TestDevolucionWeb {
 		assertEquals("Apellido Pasajero o Email del Comprador", placehd);
 	}
 
-	@Ignore
+	
 	@Test
 	@Order(2)
 	public void testPlaceholderPNREmailEnglish() {
@@ -77,7 +77,7 @@ public class TestDevolucionWeb {
 		assertEquals("Passenger last name or buyer email", placehd);
 	}
 
-	@Ignore
+	
 	@Test
 	@Order(3)
 	public void testPlaceholderPNREmailPeru() {
@@ -97,7 +97,7 @@ public class TestDevolucionWeb {
 		assertEquals("Apellido Pasajero o Email del Comprador", placehd);
 	}
 
-	@Ignore
+	
 	@Test
 	@Order(4)
 	public void testPlaceholderPNREmailArgentina() {
@@ -117,7 +117,7 @@ public class TestDevolucionWeb {
 		assertEquals("Apellido Pasajero o Email del Comprador", placehd);
 	}
 
-	@Ignore
+	
 	@Test
 	@Order(5)
 	public void testPlaceholderPNREmailColombia() {
@@ -138,7 +138,7 @@ public class TestDevolucionWeb {
 		assertEquals("Apellido Pasajero o Email del Comprador", placehd);
 	}
 	
-	@Ignore
+	
 	@Test
 	@Order(6)
 	public void testPlaceholderPNREmailBrasil() {
@@ -159,7 +159,7 @@ public class TestDevolucionWeb {
 		assertEquals("Sobrenome do passageiro ou endereço de e-mail do comprador", placehd);
 	}
 	
-	@Ignore
+	
 	@Test
 	@Order(7)
 	public void testPlaceholderPNREmailUruguay() {
