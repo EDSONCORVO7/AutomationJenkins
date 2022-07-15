@@ -196,7 +196,7 @@ public class TestDevolucionWeb {
 		Screenshot shot = new AShot().takeScreenshot(driver);
 		File file = new File(System.getProperty("user.dir")+"\\ImageFolder\\toolTipEmailChile.png");
 		System.out.println(file);
-		ImageIO.write(shot.getImage(), "PNG", file);
+		//ImageIO.write(shot.getImage(), "PNG", file);
 		
 		//Getting Expected Image
 		BufferedImage expectedImg = ImageIO.read(file);
@@ -241,7 +241,7 @@ public class TestDevolucionWeb {
 		Screenshot shot = new AShot().takeScreenshot(driver);
 		File file = new File(System.getProperty("user.dir")+"\\ImageFolder\\toolTipEmailEnglish.png");
 		System.out.println(file);
-		ImageIO.write(shot.getImage(), "PNG", file);
+		//ImageIO.write(shot.getImage(), "PNG", file);
 		
 		//Getting Expected Image
 		BufferedImage expectedImg = ImageIO.read(file);
@@ -286,7 +286,7 @@ public class TestDevolucionWeb {
 		Screenshot shot = new AShot().takeScreenshot(driver);
 		File file = new File(System.getProperty("user.dir")+"\\ImageFolder\\toolTipEmailPeru.png");
 		System.out.println(file);
-		ImageIO.write(shot.getImage(), "PNG", file);
+		//ImageIO.write(shot.getImage(), "PNG", file);
 		
 		//Getting Expected Image
 		BufferedImage expectedImg = ImageIO.read(file);
@@ -331,7 +331,7 @@ public class TestDevolucionWeb {
 		Screenshot shot = new AShot().takeScreenshot(driver);
 		File file = new File(System.getProperty("user.dir")+"\\ImageFolder\\toolTipEmailArgentina.png");
 		System.out.println(file);
-		ImageIO.write(shot.getImage(), "PNG", file);
+		//ImageIO.write(shot.getImage(), "PNG", file);
 		
 		//Getting Expected Image
 		BufferedImage expectedImg = ImageIO.read(file);
@@ -376,7 +376,7 @@ public class TestDevolucionWeb {
 		Screenshot shot = new AShot().takeScreenshot(driver);
 		File file = new File(System.getProperty("user.dir")+"\\ImageFolder\\toolTipEmailColombia.png");
 		System.out.println(file);
-		ImageIO.write(shot.getImage(), "PNG", file);
+		//ImageIO.write(shot.getImage(), "PNG", file);
 		
 		//Getting Expected Image
 		BufferedImage expectedImg = ImageIO.read(file);
@@ -421,7 +421,7 @@ public class TestDevolucionWeb {
 		Screenshot shot = new AShot().takeScreenshot(driver);
 		File file = new File(System.getProperty("user.dir")+"\\ImageFolder\\toolTipEmailBrasil.png");
 		System.out.println(file);
-		ImageIO.write(shot.getImage(), "PNG", file);
+		//ImageIO.write(shot.getImage(), "PNG", file);
 		
 		//Getting Expected Image
 		BufferedImage expectedImg = ImageIO.read(file);
@@ -467,7 +467,7 @@ public class TestDevolucionWeb {
 		Screenshot shot = new AShot().takeScreenshot(driver);
 		File file = new File(System.getProperty("user.dir")+"\\ImageFolder\\toolTipEmailUruguay.png");
 		System.out.println(file);
-		ImageIO.write(shot.getImage(), "PNG", file);
+		//ImageIO.write(shot.getImage(), "PNG", file);
 		
 		
 		//Getting Expected Image
